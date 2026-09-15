@@ -1,6 +1,6 @@
 <html>
 <body>
-<h1>index.jsp</h1>
+<h2>index.jsp</h2>
 <form action="req1" method="get">
 value1:<input type="text" name="t1">
 <br>
