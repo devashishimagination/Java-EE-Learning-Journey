@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app PUBLIC
+  "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+  "http://java.sun.com/dtd/web-app_2_3.dtd">
+
+<web-app>
+
+    <context-param> 
+        <param-name>x</param-name>
+        <param-value>1000</param-value>
+    </context-param>
+
+    <!-- 1. ALL SERVLETS FIRST -->
+    <servlet>
+        <servlet-name>1</servlet-name>
+        <servlet-class>com.controller.FirstServlet</servlet-class>
+        <init-param>
+            <param-name>a</param-name>
+            <param-value>99</param-value>
+        </init-param>       
+    </servlet>
+
+<!--     <servlet> -->
+<!--         <servlet-name>2</servlet-name> -->
+<!--         <servlet-class>com.controller.SecondController</servlet-class> -->
+<!--     </servlet> -->
+
+    <servlet>
+        <servlet-name>firstJsp</servlet-name>
+        <jsp-file>/first.jsp</jsp-file>
+        <init-param>
+            <param-name>x</param-name>
+            <param-value>10</param-value>
+        </init-param>
+    </servlet>
+
+    <servlet>
+        <servlet-name>3</servlet-name>
+        <jsp-file>/second.jsp</jsp-file>
+        <init-param>
+            <param-name>a</param-name>
+            <param-value>100</param-value>
+        </init-param>
+    </servlet>
+
+    <servlet>
+        <servlet-name>4</servlet-name>
+        <jsp-file>/third.jsp</jsp-file>
+        <init-param>
+            <param-name>a</param-name>
+            <param-value>1000</param-value>
+        </init-param>
+    </servlet>
+
+    <servlet>
+        <servlet-name>5</servlet-name>
+        <jsp-file>/fourth.jsp</jsp-file>
+        <init-param>
+            <param-name>a</param-name>
+            <param-value>1000</param-value>
+        </init-param>
+    </servlet>
+
+    <!-- 2. ALL MAPPINGS SECOND -->
+    <servlet-mapping>
+        <servlet-name>1</servlet-name>
+        <url-pattern>/req1</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>firstJsp</servlet-name>
+        <url-pattern>/first.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>3</servlet-name>
+        <url-pattern>/second.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>4</servlet-name>
+        <url-pattern>/third.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>5</servlet-name>
+        <url-pattern>/fourth.jsp</url-pattern>
+    </servlet-mapping>
+
+</web-app>
